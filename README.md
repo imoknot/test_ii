@@ -58,7 +58,7 @@ TasksMax=infinity
 
 RuntimeDirectory=gunicorn
 WorkingDirectory=/var/www/suslig
-ExecStart=/var/www/uroki/venv/bin/gunicorn -w <processor core +1> -k uvicorn.workers.UvicornWorker app:app
+ExecStart=/var/www/suslig/venv/bin/gunicorn -w <processor core +1> -k uvicorn.workers.UvicornWorker app:app
 
 [Install]
 WantedBy=multi-user.target
