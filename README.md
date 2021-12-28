@@ -57,8 +57,8 @@ LimitCORE=infinity
 TasksMax=infinity
 
 RuntimeDirectory=gunicorn
-WorkingDirectory=/var/www/suslig/app
-ExecStart=/usr/bin/gunicorn --workers=<processor core +1> --worker-class=gthread -k u>
+WorkingDirectory=/var/www/suslig
+ExecStart=/var/www/uroki/venv/bin/gunicorn -w <processor core +1> -k uvicorn.workers.UvicornWorker app:app
 
 [Install]
 WantedBy=multi-user.target
