@@ -45,7 +45,7 @@ edit this file
 
 ```
 [Unit]
-Description=Gunicorn instance to serve PuzzleApp
+Description=Gunicorn instance to serve Suslig
 After=network.target
 
 [Service]
