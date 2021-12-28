@@ -1,4 +1,4 @@
-##Hi! 
+## Hi! 
 
 Light and fast content CMS Suslig
 Based on FastAPI, PostgreSQL and SQLAlchemy  
@@ -6,9 +6,9 @@ Based on FastAPI, PostgreSQL and SQLAlchemy
 https://suslig.ru/ 
 
 
-##Fast start. 
+## Fast start. 
 
-###Create folders
+### Create folders
 ```
 $ mkdir /var/www/suslig 
 $ cd /var/www/suslig
@@ -33,7 +33,7 @@ Clone suslig and all requirements
 
 ```
 
-###Configure Nginx
+### Configure Nginx
 for Debian
 ```
 (venv) $ deactivate
