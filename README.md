@@ -1,3 +1,6 @@
+sudo dpkg-reconfigure locales
+
+
 ## Hi! 
 
 Light and fast content CMS Suslig
