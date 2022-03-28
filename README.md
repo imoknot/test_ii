@@ -1,21 +1,42 @@
-sudo dpkg-reconfigure locales
-
-
-## Hi! 
-
-Light and fast content CMS Suslig
-Based on FastAPI, PostgreSQL and SQLAlchemy  
-
-https://suslig.ru/ 
-
-
-## Fast start. 
-
-### Create folders
+# Быстрый старт 
+В папку проекта клонируем исходник
+```commandline
+git init
+git remote add origin https://github.com/imoknot/suslig
+git pull origin master
 ```
-$ mkdir /var/www/suslig 
-$ cd /var/www/suslig
+
+#### Для локальной разрабоки
+Установить зависимости 
+```commandline
+pip install -r requirements.txt
 ```
+
+#### Для докера  
+```
+Dockerfile
+docker build -t suslig .
+docker run -d --name susligdok -p 80:80 suslig
+```
+
+# Настройка сервера для ручной сборки 
+
+### Если нужно русифицировать сервер 
+```
+sudo dpkg-reconfigure locales - > UTF-8.ru
+```
+
+### Папочка для проекта
+```
+sudo mkdir /var/www/suslig 
+cd /var/www/suslig
+sudo chown 
+```
+не забываем ставить нужные права на папку
+
+Clone suslig and all requirements
+
+
 
 Create virtual environment
 ```
@@ -26,15 +47,7 @@ $ . venv/bin/activate
 ```
 
 
-Clone suslig and all requirements
 
-```
-(venv) $ git init
-(venv) $ git remote add origin https://github.com/imoknot/suslig
-(venv) $ git pull origin master
-(venv) $ pip install -r requirements.txt
-
-```
 
 test application 
 ```buildoutcfg

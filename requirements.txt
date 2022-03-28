@@ -1,2 +1,7 @@
-uvicorn>=0.15.0
-fastapi>=0.70.0
+gunicorn
+uvicorn
+fastapi
+pydantic
+asyncpg
+sqlalchemy
+pydantic[dotenv]
