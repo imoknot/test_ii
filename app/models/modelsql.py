@@ -10,7 +10,7 @@ Base = declarative_base(metadata=metadata)
 
 class User(Base):
     __tablename__ = "user"
-    id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
+    user_id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
     username = Column(String, default='')
     first_name = Column(String, default='')
     last_name = Column(String, default='')
