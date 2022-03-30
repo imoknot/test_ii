@@ -3,7 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import create_async_engine
 from .models.modelsql import Base
 from .settings import setting
-from .routes import main
+from . import routes
+
 
 # create Bases
 async def async_create_base() -> None:
@@ -11,6 +12,7 @@ async def async_create_base() -> None:
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     await engine.dispose()
+
 
 tags_metadata = [
     {"name": "main", "description": "Базовый АПИ"}
@@ -35,4 +37,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(main.main_router)
+app.include_router(routes.router)

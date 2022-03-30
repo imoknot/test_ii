@@ -5,3 +5,6 @@ pydantic
 asyncpg
 sqlalchemy
 pydantic[dotenv]
+numpy
+sklearn
+pickle
